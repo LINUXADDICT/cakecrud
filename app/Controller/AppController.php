@@ -40,6 +40,7 @@ class AppController extends Controller {
     var $app_default_email;
     var $count = 1;
     
+    //Sets protocol
     function url(){
       $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
       return $protocol . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -93,7 +94,8 @@ class AppController extends Controller {
     	$data = array('id' => $userid, 'page_limit' => $no);
     	$this->User->save($data);
     }
-
+	
+	//Page Limit
     function pageLimitArray()
     {
 	   $arr = array(1=>"1",5=>"5",10=>"10",20=>"20",30=>"30",50=>"50",100=>"100");

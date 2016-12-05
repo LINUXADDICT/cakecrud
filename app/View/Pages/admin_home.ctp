@@ -49,7 +49,54 @@
                   <header>
                     <h5>Line Chart</h5>
                   </header>
-                  <div class="body" id="trigo" style="height: 250px; padding: 0px; position: relative;"><canvas class="flot-base" width="684" height="250" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 684px; height: 250px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 23px; text-align: center;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 119px; text-align: center;">2</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 216px; text-align: center;">4</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 312px; text-align: center;">6</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 408px; text-align: center;">8</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 501px; text-align: center;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 598px; text-align: center;">12</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 201px; left: 2px; text-align: right;">-1.0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 155px; left: 2px; text-align: right;">-0.5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 110px; left: 6px; text-align: right;">0.0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 64px; left: 6px; text-align: right;">0.5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 18px; left: 6px; text-align: right;">1.0</div></div></div><canvas class="flot-overlay" width="684" height="250" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 684px; height: 250px;"></canvas><div class="legend"><div style="position: absolute; width: 46px; height: 32px; top: 13px; right: 13px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:13px;right:13px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #4572A7;overflow:hidden"></div></div></td><td class="legendLabel">sin(x)</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #AA4643;overflow:hidden"></div></div></td><td class="legendLabel">cos(x)</td></tr></tbody></table></div></div>
+                  <!-- CHARTS -->
+					<div class="body" id="trigo" style="height: 250px; padding: 0px; position: relative;">
+					  <canvas class="flot-base" width="684" height="250" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 684px; height: 250px;"></canvas>
+					  <div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+						<div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+						  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 23px; text-align: center;">0</div>
+						  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 119px; text-align: center;">2</div>
+						  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 216px; text-align: center;">4</div>
+						  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 312px; text-align: center;">6</div>
+						  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 408px; text-align: center;">8</div>
+						  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 501px; text-align: center;">10</div>
+						  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 85px; top: 232px; left: 598px; text-align: center;">12</div>
+						</div>
+						<div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+						  <div class="flot-tick-label tickLabel" style="position: absolute; top: 201px; left: 2px; text-align: right;">-1.0</div>
+						  <div class="flot-tick-label tickLabel" style="position: absolute; top: 155px; left: 2px; text-align: right;">-0.5</div>
+						  <div class="flot-tick-label tickLabel" style="position: absolute; top: 110px; left: 6px; text-align: right;">0.0</div>
+						  <div class="flot-tick-label tickLabel" style="position: absolute; top: 64px; left: 6px; text-align: right;">0.5</div>
+						  <div class="flot-tick-label tickLabel" style="position: absolute; top: 18px; left: 6px; text-align: right;">1.0</div>
+						</div>
+					  </div>
+					  <canvas class="flot-overlay" width="684" height="250" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 684px; height: 250px;"></canvas>
+					  <div class="legend">
+						<div style="position: absolute; width: 46px; height: 32px; top: 13px; right: 13px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div>
+						<table style="position:absolute;top:13px;right:13px;;font-size:smaller;color:#545454">
+						  <tbody>
+							<tr>
+							  <td class="legendColorBox">
+								<div style="border:1px solid #ccc;padding:1px">
+								  <div style="width:4px;height:0;border:5px solid #4572A7;overflow:hidden"></div>
+								</div>
+							  </td>
+							  <td class="legendLabel">sin(x)</td>
+							</tr>
+							<tr>
+							  <td class="legendColorBox">
+								<div style="border:1px solid #ccc;padding:1px">
+								  <div style="width:4px;height:0;border:5px solid #AA4643;overflow:hidden"></div>
+								</div>
+							  </td>
+							  <td class="legendLabel">cos(x)</td>
+							</tr>
+						  </tbody>
+						</table>
+					  </div>
+					</div>
+
+                  <!-- /CHARTS -->
                 </div>
               </div>
               <div class="col-lg-4">

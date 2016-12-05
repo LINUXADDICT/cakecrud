@@ -11,14 +11,14 @@ class UsersController extends AppController {
         parent::beforeFilter();
         
     }
-    /* this is used to set pagination default order*/
+    /* Set pagination default order*/
     public $paginate = array(
             'order' => array(
 			 'User.id' => 'desc'
 		 )
 	 );	
    
-   /* this function is used to list all the user added by admin*/
+   /* List all users added by admin*/
     public function admin_index()
     {
 		$this->admin_checkSession();
@@ -47,14 +47,14 @@ class UsersController extends AppController {
         }  
     }
     
-    // this is used for change page record count
+    // Change page record count
     public function admin_page($no)	
     {
 		$this->changeNoOfRecord($no);
 		$this->redirect(array('controller'=>'users','action'=>'index'));
 	}
     
-    // this is used to add new user and edit existing records
+    // Add new user & Edit existing records
     public function admin_add()		
     {
 		$this->admin_checkSession();
@@ -83,7 +83,7 @@ class UsersController extends AppController {
 		    }
         }
     }
-    /* this function is used to delete record */
+    /* Delete record */
     public function admin_delete($id,$pageno)
     {
 		$this->admin_checkSession();
@@ -101,7 +101,7 @@ class UsersController extends AppController {
 			$this->redirect(array('action'=>'index', 'page' => $pageno));
 	    }
     }
-    /* this function is used to login for the admin */
+    /* Login for admin page */
     public function admin_login()
     {
         $this->layout = 'admin_login';
@@ -145,7 +145,7 @@ class UsersController extends AppController {
         $this->request->data['User']['rememberme'] = $this->Cookie->read('rememberme');
 
     }
-    /* thiis function is used to logout*/
+    /* Logout*/
     public function admin_logout()
     {
         $this->Session->delete('SS_ADMINID');

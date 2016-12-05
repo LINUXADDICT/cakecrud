@@ -28,7 +28,7 @@
     <hr>
     
 		<!-- END LOGIN FORM -->
-                
+   <!-- VALIDATION -->             
  <script type="text/javascript">
         //alert($("#username").val());
         $('#frmadminlogin').validate({
@@ -74,9 +74,10 @@
 
 
 	        });
-        
-   
- </script>               
+
+
+ </script> 
+ <!-- /VALIDATION -->              
                 
 <script>
     $('#flashMessage').animate({opacity: 1.0}, 3000).fadeOut();

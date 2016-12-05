@@ -61,6 +61,7 @@ $this->Paginator->options(array('update' => '#cnt','evalScripts' => true,
 													</tr>
 												</thead>
 												<tbody>
+												<!-- Users Table -->
 												    <?php
 												    if(!empty($users))
 												    {
@@ -89,7 +90,7 @@ $this->Paginator->options(array('update' => '#cnt','evalScripts' => true,
 												    }else{
 												
 												    ?>
-												    
+												    <!-- /Users Table -->
 												    <tr class="odd gradeX">
 														<td colspan="6" style ="text-align:center">No Records found.</td>
 												    </tr>
@@ -103,7 +104,9 @@ $this->Paginator->options(array('update' => '#cnt','evalScripts' => true,
 									
 											<!--end table-->
 										    <div class="span6" style="float: right;">
+										    <!-- Pagination -->
 												<?php echo $this->element('pagination'); ?>
+											<!-- /Pagination -->
 										   	</div>
 								    
 								    	</div>
@@ -210,7 +213,7 @@ $this->Paginator->options(array('update' => '#cnt','evalScripts' => true,
 	  format: 'mm/dd/yyyy',
         // startDate: '-3d'
 	});
-        //alert($("#username").val());
+        //Validation for multiple fields
         $('#UserAdminIndexForm').validate({
 	            //errorElement: 'label', //default input error message container
 	            //errorClass: 'help-inline', // default input error message class
@@ -266,7 +269,7 @@ $this->Paginator->options(array('update' => '#cnt','evalScripts' => true,
 
 
 	        });
-   
+   //Edit User
   $('.editbutton').click(function(){
   	console.log($(this).attr('data-id'));
   	$('.modal-title').html('Edit User');
@@ -278,7 +281,8 @@ $this->Paginator->options(array('update' => '#cnt','evalScripts' => true,
   	$('#UserPosition').val($(this).closest('tr').find('.position').attr('data-position'));
   	$('#UserSalary').val($(this).closest('tr').find('.salary').html());
 	$(".error").html("");
-  });  
+  });
+  //Add User
    $('.addnew').click(function(){
   	$('.modal-title').html('Add New User');
   	$('#editid').val(0);
@@ -294,7 +298,7 @@ $this->Paginator->options(array('update' => '#cnt','evalScripts' => true,
 	});
   });
    
-   
+   //Has fix for bug that deletes last decimal
    //$('#UserSalary').blur(function() {
 //				$('#formatWhileTypingAndWarnOnDecimalsEnteredNotification2').html(null);
 //				$(this).formatCurrency({ colorize: true, negativeFormat: '-%s%n', roundToDecimalPlace: 2 });
@@ -321,6 +325,7 @@ $this->Paginator->options(array('update' => '#cnt','evalScripts' => true,
 //					}
 //				}
 //			})
+			//Data validation for salary 
 //			.bind('decimalsEntered', function(e, cents) {
 //				if (String(cents).length > 2) {
 //					var errorMsg = 'Please do not enter any cents (0.' + cents + ')';

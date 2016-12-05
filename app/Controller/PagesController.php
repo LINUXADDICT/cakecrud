@@ -57,28 +57,28 @@ class PagesController extends AppController {
 	public function beforeFilter() {
 		parent::beforeFilter();
 	}
-	
+	//Builds home
 	public function admin_home($page = null) {
 		$this->admin_checkSession();
 		$this->layout = 'admin_default';
 		$this->set('title_for_layout', 'Dashboard');
 		$this->set('error', false);
 		$usrpgelimit = 5;
-		
+		//Sets order and limit for display
 		$data = $this->User->find('all',array('conditions'=>array(),'order'=>array('User.id DESC'),'limit'=>10));
 		$newdata = $this->User->find('list',array('fields'=>'User.dateCreated'));
 
 		$this->redirect(array("controller" => "users", "action" => "index"));
 		//pr($newdata); die();
-
+		//Rebuild AJAX data
 		$this->set('newdata',$newdata);
 		$this->set('data',$data);
 		if($this->RequestHandler->isAjax()) {
 		    $this->render('admin_home', 'ajax');
 		}
 	}
-	
-	
+
+
 	public function home() {
 		$this->redirect(array('controller' => 'pages', 'action' => 'admin_home', 'admin' => true));
 	}
